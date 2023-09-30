@@ -138,11 +138,6 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 #cloudinary settings
 
-# cloudinary.config( 
-#   cloud_name = "dtkv72qlx", 
-#   api_key = "744644932182178", 
-#   api_secret = "61KCM5y6uGDWWtcmMS3RnyNgAg0" 
-# )
 
 CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'dtkv72qlx',
