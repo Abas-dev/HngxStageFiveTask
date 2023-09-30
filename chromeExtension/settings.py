@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os 
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #adding my apps 
+    'extensionApi.apps.ExtensionapiConfig',
+
+    #third party apps 
+    'rest_framework',
+    'cloudinary',
+    'cloudinary_storage',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +128,27 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+
+MEDIA_URL = '/video/'
+
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'video')
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+#cloudinary settings
+
+# cloudinary.config( 
+#   cloud_name = "dtkv72qlx", 
+#   api_key = "744644932182178", 
+#   api_secret = "61KCM5y6uGDWWtcmMS3RnyNgAg0" 
+# )
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dtkv72qlx',
+    'API_KEY': '744644932182178',
+    'API_SECRET': '61KCM5y6uGDWWtcmMS3RnyNgAg0'
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
