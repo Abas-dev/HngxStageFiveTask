@@ -89,3 +89,26 @@ class GetuploadedVideo(GenericAPIView):
 #         except Exception as e:
 #             # Handle any errors (e.g., data corruption, incomplete chunks)
 #             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)        
+
+
+
+
+asgiref==3.7.2
+certifi==2023.7.22
+charset-normalizer==3.2.0
+cloudinary==1.35.0
+Django
+django-cloudinary-storage==0.3.0
+django-cors-headers
+djangorestframework
+gunicorn
+idna
+packaging
+Pillow
+python-magic
+pytz==2023.3.post1
+requests
+six
+sqlparse
+typing_extensions
+urllib3
