@@ -2,9 +2,8 @@ import uuid
 from django.db import models
 
 class VideoData(models.Model):
-    video_id = models.UUIDField(primary_key=True,editable=False,default=uuid.uuid4)
-    videoName = models.CharField(max_length=250)
     video = models.FileField(upload_to='videos/')
+    created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
-        return self.videoName
+        return f"Recorded Video {self.id}"  
