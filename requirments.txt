@@ -20,3 +20,4 @@ urllib3
 psycopg2-binary
 dj-database-url
 drf-yasg
+whitenoise
