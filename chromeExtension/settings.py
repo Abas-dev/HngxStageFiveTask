@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-&zm&6%9k92fw1fvb6=8^^c04%zlx93q)tfh1302i6tuoey^+4=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://chrome-extension-vgf6.onrender.com']
+ALLOWED_HOSTS = ['chrome-extension-vgf6.onrender.com']
 
 
 # Application definition
