@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     #third party apps 
     'rest_framework',
     "corsheaders",
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -102,8 +103,16 @@ WSGI_APPLICATION = 'chromeExtension.wsgi.application'
 #     }
 # }
 
-DATABASES = { 
-    'default': dj_database_url.parse('postgres://chrome_extension_user:nyEXcQd6Kse4hxTe1gCBkiFtQLbZO4hO@dpg-ckd6qfsiibqc738gomfg-a/chrome_extension')
+# DATABASES = { 
+#     'default': dj_database_url.parse('postgres://chrome_extension_user:nyEXcQd6Kse4hxTe1gCBkiFtQLbZO4hO@dpg-ckd6qfsiibqc738gomfg-a/chrome_extension')
+# }
+
+DATABASES = {
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgres://chrome_extension_user:nyEXcQd6Kse4hxTe1gCBkiFtQLbZO4hO@dpg-ckd6qfsiibqc738gomfg-a.oregon-postgres.render.com/chrome_extension',
+        conn_max_age=600
+    )
 }
 
 # Password validation

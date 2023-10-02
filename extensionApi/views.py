@@ -66,8 +66,9 @@ class GetuploadedVideo(GenericAPIView):
 
 
 
+class GetVideoById(GenericAPIView):
 
-    # def get(self,request:Request):
-    #     videos = self.get_queryset()
-    #     serializer = self.get_serializer(videos, many=True)
-    #     return Response(data=serializer.data,status=status.HTTP_200_OK)          
+    def get(self,request:Request,id):
+        videos = self.get_queryset(id=id)
+        serializer = self.get_serializer(videos)
+        return Response(data=serializer.data,status=status.HTTP_200_OK)          
